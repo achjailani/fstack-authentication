@@ -28,7 +28,7 @@ class UserRepository
 			$model->password 	= Hash::make($data['password']);
 			$model->save();
 
-			return ['success' => true, 'message' => 'Created successfully'];
+			return ['success' => true, 'data' => $model, 'message' => 'Created successfully'];
 		} catch (Exception $e) {
 			return ['success' => false, 'message' => $e->getMessage()];
 		}
@@ -42,11 +42,54 @@ class UserRepository
 	public function getAll()
 	{
 		try {
-			$data = $this->model->where('id', '!=', auth()->id)->get();
+			$data = $this->model->where('id', '!=', auth()->user()->id)->get();
 			return ['success' => true, 'data' => $data];
 		} catch (Exception $e) {
 			return ['success' => false, 'message' => $e->getMessage()];
 		}
 	}
 
+	/**
+     * Get a user
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+	public function findOne($id)
+	{
+		try {
+			$data = $this->model->find($id);
+			return ['success' => true, 'data' => $data];
+		} catch (Exception $e) {
+			return ['success' => false, 'message' => $e->getMessage()];
+		}
+	}
+
+	public function updateStatus($id)
+	{
+		try {
+			$data = $this->model->find($id);
+			$data->is_active = !$data->is_active;
+			$data->save();
+			return ['success' => true, 'data' => $data];
+		} catch (Exception $e) {
+			return ['success' => false, 'message' => $e->getMessage()];
+		}
+	}
+
+	/**
+     * Delete a user
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+	public function deleteOne($id)
+	{
+		try {
+			$this->model->destroy($id);
+			return ['success' => true, 'message' => 'Deleted successfully'];
+		} catch (Exception $e) {
+			return ['success' => false, 'message' => $e->getMessage()];
+		}
+	}
 }
