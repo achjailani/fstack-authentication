@@ -22,4 +22,11 @@ $router->group(['prefix' => 'api/v1', 'namespace' => 'API'], function () use ($r
         $router->post('/register', 'RegisterController@register');
         $router->post('/login', 'LoginController@login');
     });
+
+    $router->group(['prefix' => 'users', 'middleware' => 'auth:api'], function() use ($router) {
+        $router->get('/', ['middleware' => 'role:admin', 'uses' => 'UserController@getAll']);
+        $router->get('/show/{id}', 'UserController@find');
+        $router->put('/update/{id}', 'UserController@update');
+        $router->delete('/delete', 'UserController@delete');
+    });
 });

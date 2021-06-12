@@ -20,7 +20,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'username', 'password',
+        'username', 'email', 'username', 'password', 'is_active',
     ];
 
     /**
@@ -39,7 +39,8 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      */
     protected $attributes = [
         'email_verified_at' => null,
-        'role'              => 'user'
+        'role'              => 'user',
+        'is_active'         => true
     ];
 
     /**
@@ -50,6 +51,15 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     public function getJWTIdentifier()
     {
         return $this->getKey();
+    }
+
+    public function hasRole($role) 
+    {
+        $data = $this->where('role', $role)->where('id', auth()->user()->id)->first();
+        if($data) {
+            return true;
+        }
+        return false;
     }
 
     /**

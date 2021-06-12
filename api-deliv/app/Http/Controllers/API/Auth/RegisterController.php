@@ -34,7 +34,7 @@ class RegisterController extends Controller
             if($response['success'] === false) {
                 return $this->apiInternalServerErrorResponse($response['message']);
             }
-            return $this->restApi($message = 'Registered successfully', $data[], 201);
+            return $this->restApi($message = 'Registered successfully', $data = [], 201);
         }
         return $this->apiUnprocessableEntityResponse($validation);
     }
