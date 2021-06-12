@@ -8,20 +8,21 @@ class LoginValidator extends BaseValidator
     public function __construct()
     {
         $this->attributes = [
-            'name'  => 'Name of category',
-            'description'   => 'Description of category'    
+            'email_or_username'  => 'Name or username of user',
+            'password'           => 'Password of user'    
         ];
 
         $this->rules = [
-            'name' => 'required|string|unique:categories|max:100',
-            'description' => 'nullable|string'
+            'email_or_username' => 'required|string|max:255',
+            'password'          => 'required|min:8'
         ];
 
         $this->messages = [
-            'name.required' => 'Kategori tidak boleh kosong',
-            'name.unique'   => 'Kategori sudah terdaftar',
-            'name.max'      => 'Kategori maksimal panjang 100 karakter',
-            'description.string' => 'Keterangan harus berupa string',
+            'email_or_username.required' => trans('validation.required'),
+            'email_or_username.string'   => trans('validation.string'),
+            'email_or_username.max'      => trans('validation.max'),
+            'password.required'          => trans('validation.required'),
+            'password.min'               => trans('validation.min'),
         ];
     }
 }
