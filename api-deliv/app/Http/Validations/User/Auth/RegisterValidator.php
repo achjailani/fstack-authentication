@@ -11,11 +11,12 @@ class RegisterValidator extends BaseValidator
             'fullname'   => 'Name of user',
             'email'      => 'Email of user',
             'username'   => 'Username of user',
-            'password'   => 'Password of user'  
+            'password'   => 'Password of user',
+            'confirm_password'  => 'Confirmation password'  
         ];
 
         $this->rules = [
-            'name'      => 'required|string|max:255',
+            'fullname'  => 'required|string|max:255',
             'email'     => 'required|email|unique:users|max:255',
             'username'  => 'required|string|unique:users|max:255',
             'password'  => 'required|min:8|max:255',
@@ -23,10 +24,20 @@ class RegisterValidator extends BaseValidator
         ];
 
         $this->messages = [
-            'name.required' => 'Kategori tidak boleh kosong',
-            'name.unique'   => 'Kategori sudah terdaftar',
-            'name.max'      => 'Kategori maksimal panjang 100 karakter',
-            'description.string' => 'Keterangan harus berupa string',
+            'fullname.required' => trans('validation.required'),
+            'fullname.max'      => trans('validation.max'),
+            'email.required'    => trans('validation.required'),
+            'email.email'       => trans('validation.email'),
+            'email.unique'      => trans('validation.unique'),
+            'email.max'         => trans('validation.max'),
+            'username.required' => trans('validation.required'),
+            'username.email'    => trans('validation.email'),
+            'username.unique'   => trans('validation.unique'),
+            'username.max'      => trans('validation.max'),
+            'password.required' => trans('validation.required'),
+            'password.min'      => trans('validation.min'),
+            'password.max'      => trans('validation.max'),
+            'confirm_password.same'      => trans('validation.same'),
         ];
     }
 }
