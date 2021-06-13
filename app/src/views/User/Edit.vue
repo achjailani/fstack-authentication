@@ -3,7 +3,7 @@
         <div class="col-md-12 d-flex justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <h5 class="card-header">Register</h5>
+                    <h5 class="card-header">Edit User</h5>
                     <div class="card-body">
                         <form>
                             <div class="form-group">
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+    // import { auth } from '../../service/api.js';
     export default {
         name: "Login",
         data() {

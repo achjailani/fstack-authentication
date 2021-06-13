@@ -1,34 +1,34 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container">
-        <router-link class="navbar-brand" to="/">Navbar</router-link>
+        <router-link class="navbar-brand text-light" to="/">Hook</router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
+              <router-link class="nav-link text-light" to="/">Home <span class="sr-only">(current)</span></router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/about">About</router-link>
+              <router-link class="nav-link text-light" to="/about">About</router-link>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hi, Melisa
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <router-link class="dropdown-item" to="/about">About</router-link>
-                <a class="dropdown-item" href="#">Another action</a>
+                <router-link class="dropdown-item" to="/users">All users</router-link>
+                <router-link class="dropdown-item" to="/me">Profile</router-link>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a href="#" class="dropdown-item" @click="logout" >Logout</a>
               </div>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <router-link class="btn btn-outline-primary" to="/login">Login</router-link>
-            <router-link class="btn btn-primary ml-2" to="/register">Register</router-link>
+            <router-link class="btn btn-outline-light" to="/login">Login</router-link>
+            <router-link class="btn btn-light ml-2" to="/register">Register</router-link>
           </form>
         </div>
     </div>
@@ -41,6 +41,11 @@
 <script>
 export default {
   name: "App",
+  methods: {
+    logout() {
+      this.$router.push('/');
+    }
+  }
 };
 </script>
 
@@ -51,16 +56,4 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-/* #nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
 </style>

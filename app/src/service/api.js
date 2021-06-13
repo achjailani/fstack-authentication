@@ -42,4 +42,7 @@ const user = {
     return uri.delete("/users/delete");
   },
 };
-module.exports = { auth, user };
+export default {
+  auth,
+  user,
+};

@@ -7,14 +7,15 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label for="login">Email or Username</label>
-                                <input type="text" name="login" class="form-control" >
+                                <label for="email_or_username">Email or Username</label>
+                                <input type="text" v-model="email_or_username" autocomplete="off" name="email_or_username" class="form-control" >
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" name="password" class="form-control">
+                                <input type="password" v-model="password" autocomplete="off" name="password" class="form-control">
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button v-on:click.prevent="attemptLogin" class="btn btn-primary">Login</button>
+                            <button @click.prevent="hello" class="btn btn-primary">Hello</button>
                         </form>
                     </div>
                 </div>
@@ -24,13 +25,33 @@
 </template>
 
 <script>
-    // import { auth } from '../../service/api.js';
+    // import api from '../../service/api.js';
     export default {
         name: "Login",
         data() {
             return {
-                auth: {}
+                email_or_username: null,
+                password: null
+            }
+        },
+        mathods: {
+            attemptLogin() {
+                alert("Hello")
+                // let data = {
+                //     email_or_username: this.login,
+                //     password: this.password
+                // }
+                
+                // await api.auth.login(data).then((response) => {
+                //     return response.json()
+                // }).then((res) => {
+                //     console.log(res)
+                // }).catch((err) => console.error(err))
+            },
+            hello() {
+                console.log("hello")
             }
         }
+        
     }
 </script>
