@@ -15,3 +15,5 @@ Untuk instalasinya sebagai berikut
 -   Untuk menjalankan `php -S localhost:8000 -t public`
 
 ### API Dokumentasi
+
+Dokumentasi API menggunakan Insomnia [disini](https://github.com/achjailani/deliv-test/blob/develop/Insomnia_deliv_api_test.yaml)
