@@ -1,24 +1,15 @@
-# app
+# Frontend (Client)
 
-## Project setup
-```
-npm install
-```
+Projek ini menggunakan Vue Js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Instalasi
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Untuk instalasinya sebagai berikut
 
-### Lints and fixes files
-```
-npm run lint
-```
+- Masuk folder projek `cd deliv-test\app`
+- Instal required packanges `npm install`
+- Untuk menjalankan `npm run serve`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Keterangan
+
+Untuk sisi client (frontend) masih banyak kekurangan, integrasi dengan backend masih belum terimplementasi sepenuhnya.

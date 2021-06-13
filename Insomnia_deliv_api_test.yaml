@@ -1,0 +1,226 @@
+_type: export
+__export_format: 4
+__export_date: 2021-06-13T09:04:14.340Z
+__export_source: insomnia.desktop.app:v2021.3.0
+resources:
+  - _id: req_6b4d62e171004c429f7cf9b9eaf0df3a
+    parentId: fld_8010765789d743cf959227b6870d6768
+    modified: 1623521381607
+    created: 1623514575692
+    url: http://localhost:8000/api/v1/users/delete
+    name: Delete a user
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2MjM1MjEzNjUsImV4cCI6MTYyMzUyNDk2NSwibmJmIjoxNjIzNTIxMzY1LCJqdGkiOiJ2cUdmNGY3bDJ2OG9mWnBLIiwic3ViIjo0LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.T_-08GxD8VILZlyBSSiqXSrBlUB-hwnp_wwLAuSaVCI
+    metaSortKey: -1623514575692
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8010765789d743cf959227b6870d6768
+    parentId: fld_c9daff1b68ad4bf9947e874494a0f605
+    modified: 1623508150707
+    created: 1623508150707
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1623508150707
+    _type: request_group
+  - _id: fld_c9daff1b68ad4bf9947e874494a0f605
+    parentId: wrk_c581c2e7b86f4061aca023f882c150e8
+    modified: 1623494035333
+    created: 1623494035333
+    name: Deliv
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1623494035334
+    _type: request_group
+  - _id: wrk_c581c2e7b86f4061aca023f882c150e8
+    parentId: null
+    modified: 1622454786588
+    created: 1622454786588
+    name: LOL
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_228aaeaf03c14ecd99465ac96121cb90
+    parentId: fld_8010765789d743cf959227b6870d6768
+    modified: 1623521078516
+    created: 1623514535369
+    url: http://localhost:8000/api/v1/users/update/3
+    name: Update a user
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"fullname": "Lee Min Hii",
+        	"username": "leeminho",
+        	"email": "leeminho@gmail.com",
+        	"password": "hello224400",
+        	"confirm_password": "hello224400"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_68670aecd025498db9cdd64db1c07046
+    authentication:
+      type: bearer
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2MjM1MjEwMzcsImV4cCI6MTYyMzUyNDYzNywibmJmIjoxNjIzNTIxMDM3LCJqdGkiOiJGakswMG00TFRRQ090dzAyIiwic3ViIjozLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.I2eRNXETsRrAUch2dG3eOnk1bJ_8jXvyffCc4Tnih2Q
+    metaSortKey: -1623514535369
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_71e9bcbdabc645499910917893a9019a
+    parentId: fld_8010765789d743cf959227b6870d6768
+    modified: 1623514083436
+    created: 1623511431266
+    url: http://localhost:8000/api/v1/users/show/1
+    name: Get a user
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2MjM1MTM2NzAsImV4cCI6MTYyMzUxNzI3MCwibmJmIjoxNjIzNTEzNjcwLCJqdGkiOiJQcXJ2c056YW9qNWUzVkJsIiwic3ViIjozLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Mk_oGEVCgLSjFyxVsGqQMx05kS9XDKuHrW8Z-MZXQrQ
+    metaSortKey: -1623511431266
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9748f043045e490094fbebee4ded829f
+    parentId: fld_8010765789d743cf959227b6870d6768
+    modified: 1623513681701
+    created: 1623508184491
+    url: http://localhost:8000/api/v1/users
+    name: Get all users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2MjM1MTM2NzAsImV4cCI6MTYyMzUxNzI3MCwibmJmIjoxNjIzNTEzNjcwLCJqdGkiOiJQcXJ2c056YW9qNWUzVkJsIiwic3ViIjozLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Mk_oGEVCgLSjFyxVsGqQMx05kS9XDKuHrW8Z-MZXQrQ
+    metaSortKey: -1623508184491
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b88136f11f6b4ed59372a533da71013c
+    parentId: fld_c9daff1b68ad4bf9947e874494a0f605
+    modified: 1623521361232
+    created: 1623494179308
+    url: http://localhost:8000/api/v1/login
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email_or_username": "rofiqi@gmail.com",
+        	"password": "hello2244"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_81ca464472af44c98e104d4c859e9d26
+    authentication: {}
+    metaSortKey: -1623494179308
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d86c7996397b4f64af3009e2c0f8af1c
+    parentId: fld_c9daff1b68ad4bf9947e874494a0f605
+    modified: 1623520488209
+    created: 1623494057321
+    url: http://localhost:8000/api/v1/register
+    name: Register
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"fullname": "Ach. Rofiqi",
+        	"username": "rofiqi",
+        	"email": "rofiqi@gmail.com",
+        	"password": "hello2244",
+        	"confirm_password": "hello2244"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_636515dea35e401183adfdb5a1740e71
+    authentication: {}
+    metaSortKey: -1623494057321
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_0439f8eadac0f47832a90d2f624cdc56bbced50c
+    parentId: wrk_c581c2e7b86f4061aca023f882c150e8
+    modified: 1622454788449
+    created: 1622454788449
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1622454788449
+    _type: environment
+  - _id: jar_0439f8eadac0f47832a90d2f624cdc56bbced50c
+    parentId: wrk_c581c2e7b86f4061aca023f882c150e8
+    modified: 1622454788481
+    created: 1622454788481
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_903e2eef095846a79426a9565ee0bc42
+    parentId: wrk_c581c2e7b86f4061aca023f882c150e8
+    modified: 1622454786631
+    created: 1622454786631
+    fileName: LOL
+    contents: ""
+    contentType: yaml
+    _type: api_spec
