@@ -6,8 +6,8 @@ Projek ini menggunakan framework Lumen ( Versi Lightweight) dari Laravel Framewo
 
 Untuk instalasinya sebagai berikut
 
--   Clone projek `git clone git@github.com:achjailani/deliv-test.git`
--   Masuk directory `cd deliv-test\api`
+-   Clone projek `git clone git@github.com:achjailani/fstack-authentication.git`
+-   Masuk directory `cd fstack-authentication\api`
 -   Instal required packages `composer install`
 -   Copy paste file `.env.example` lalu rename menjadi `.env`
 -   Konfigurasi database pada file `.env`, disini saya menggunakan MySQL
